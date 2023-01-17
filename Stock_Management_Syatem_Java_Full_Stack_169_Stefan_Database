@@ -1,0 +1,53 @@
+Stock Management System - Database
+---------------------------------------------------------------------------------------
+Database
+---------------------------------------------------------------------------------------
+CREATE DATABASE IF NOT EXISTS stocktest;
+CREATE DATABASE IF NOT EXISTS stockfinal;
+---------------------------------------------------------------------------------------
+Tables
+----------------------------------------------------------------------------------------
+
+Table Name: brands
+
+CREATE TABLE `brands` (
+  `brand_id` int(11) NOT NULL,
+  `brand_name` varchar(255) NOT NULL,
+  `brand_active` int(11) NOT NULL DEFAULT '0',
+  `brand_status` int(11) NOT NULL DEFAULT '0'
+) ;
+
+------------------------------------------------------------------------------------------
+Table Name: categories
+
+CREATE TABLE `categories` (
+  `categories_id` int(11) NOT NULL,
+  `categories_name` varchar(255) NOT NULL,
+  `categories_active` int(11) NOT NULL DEFAULT '0',
+  `categories_status` int(11) NOT NULL DEFAULT '0'
+) ;
+
+------------------------------------------------------------------------------------------
+Table Name: orders
+
+CREATE TABLE `orders` (
+  `order_id` int(11) NOT NULL,
+  `order_date` date NOT NULL,
+  `client_name` varchar(255) NOT NULL,
+  `client_contact` varchar(255) NOT NULL,
+  `sub_total` varchar(255) NOT NULL,
+  `vat` varchar(255) NOT NULL,
+  `total_amount` varchar(255) NOT NULL,
+  `discount` varchar(255) NOT NULL,
+  `grand_total` varchar(255) NOT NULL,
+  `paid` varchar(255) NOT NULL,
+  `due` varchar(255) NOT NULL,
+  `payment_type` int(11) NOT NULL,
+  `payment_status` int(11) NOT NULL,
+  `payment_place` int(11) NOT NULL,
+  `gstn` varchar(255) NOT NULL,
+  `order_status` int(11) NOT NULL DEFAULT '0',
+  `user_id` int(11) NOT NULL
+) ;
+----------------------------------------------------------------------------------------
+
